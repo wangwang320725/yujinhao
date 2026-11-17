@@ -144,7 +144,7 @@ bad:["🌧️","BAD ENDING — 조금 멀어진 우리","마음을 제대로 표
 const $=id=>document.getElementById(id);
 let st,Q=[],p=0,hist=[];
 const BGM={"🌧":"rain","🛒":"store","🍪":"store","🛗":"elev","🍙":"elev","🌙":"night","🌃":"night","📱":"night","📵":"night","🌠":"night","🤝":"night","🛍":"mall","☕":"cafe","🎓":"cafe","🏢":"office","📉":"office","🍲":"rest","🍜":"rest","🌆":"dusk","💭":"dusk","⏰":"dusk","💙":"dusk","📞":"home","🏠":"home","🍫":"home","🤒":"home","🎂":"home","🎬":"cinema","🌤":"day"};
-const IMG={rain:"images/rain.jpg",store:"images/store.jpg",elev:"images/elev.jpg",night:"images/night.jpg",mall:"images/mall.jpg",cafe:"images/cafe.jpg",office:"images/office.jpg",rest:"images/rest.jpg",dusk:"images/dusk.jpg",home:"images/home.jpg",cinema:"images/cinema.jpg",day:"images/day.jpg"};
+const IMG={rain:"rain.jpg",store:"store.jpg",elev:"elev.jpg",night:"night.jpg",mall:"mall.jpg",cafe:"cafe.jpg",office:"office.jpg",rest:"rest.jpg",dusk:"dusk.jpg",home:"home.jpg",cinema:"cinema.jpg",day:"day.jpg"};
 function setBg(k){const b=$("bg");if(b.dataset.k===k)return;b.dataset.k=k;b.style.backgroundImage="url("+IMG[k]+")"}
 function bgFor(){for(let i=p;i>=0;i--){if(!Q[i]||!Q[i].f)continue;const k=BGM[Q[i].f.replace(/\uFE0F/g,"")];if(k)return k}return"store"}
 function mk(a){const o={w:a[0],f:a[1],t:a[2]};if(a[3])o.o=a[3];return o}
